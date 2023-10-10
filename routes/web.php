@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BlogCommentController;
+use App\Http\Controllers\BlogLikeController;
+use App\Http\Controllers\BlogCommentLikeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +29,6 @@ Route::put('api/v1/blog/{id}', [BlogController::class, 'update']);
 Route::delete('api/v1/blog/{id}', [BlogController::class, 'delete']);
 Route::get('api/v1/blog/{id}', [BlogController::class, 'read']);
 Route::get('api/v1/blog', [BlogController::class, 'list']);
+Route::post('api/v1/blogcomment', [BlogCommentController::class, 'create']);
+Route::post('api/v1/bloglike', [BlogLikeController::class, 'create']);
+Route::post('api/v1/blogcommentlike', [BlogCommentLikeController::class, 'create']);
