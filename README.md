@@ -1,5 +1,5 @@
 # Introduction 
-This is Aplikasi Backend API
+This is Aplication Backend API
 
 note: Postmant collection API Backend is availbel in this repository, the name is backend.postman_collection.json
       you can import to postmant (sceenshoot availble in postmant.png)
