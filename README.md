@@ -12,5 +12,5 @@ note: Postmant collection API Backend is availbel in this repository, the name i
 3. if dont have web server external, you can use web server default laravel, this is command for run it
    php artisan serve --port=80
    (sceenshoot availble in run-server.png)
-
+4. set configuration database in file .env
 
