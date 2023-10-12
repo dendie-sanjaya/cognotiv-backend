@@ -118,7 +118,7 @@
 					"urlencoded": [
 						{
 							"key": "title",
-							"value": "Test Post 2",
+							"value": "Test Post 10",
 							"type": "text"
 						},
 						{
@@ -139,7 +139,7 @@
 					]
 				},
 				"url": {
-					"raw": "{{base_url}}/api/v1/blog",
+					"raw": "{{base_url}}/api/v1/blog?keyword=adelia&filter_field=fullname",
 					"host": [
 						"{{base_url}}"
 					],
@@ -147,6 +147,16 @@
 						"api",
 						"v1",
 						"blog"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "adelia"
+						},
+						{
+							"key": "filter_field",
+							"value": "fullname"
+						}
 					]
 				}
 			},
@@ -261,14 +271,15 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "{{base_url}}/api/v1/blog",
+					"raw": "{{base_url}}/api/v1/blog/4",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"api",
 						"v1",
-						"blog"
+						"blog",
+						"4"
 					]
 				}
 			},
@@ -357,6 +368,53 @@
 						"api",
 						"v1",
 						"blogcomment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Comment List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "blog_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "commen bla-bla",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/blogcomment/9",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"blogcomment",
+						"9"
 					]
 				}
 			},

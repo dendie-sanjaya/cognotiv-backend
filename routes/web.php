@@ -30,5 +30,6 @@ Route::delete('api/v1/blog/{id}', [BlogController::class, 'delete']);
 Route::get('api/v1/blog/{id}', [BlogController::class, 'read']);
 Route::get('api/v1/blog', [BlogController::class, 'list']);
 Route::post('api/v1/blogcomment', [BlogCommentController::class, 'create']);
+Route::get('api/v1/blogcomment/{id}', [BlogCommentController::class, 'list']);
 Route::post('api/v1/bloglike', [BlogLikeController::class, 'create']);
 Route::post('api/v1/blogcommentlike', [BlogCommentLikeController::class, 'create']);
